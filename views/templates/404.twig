@@ -1,0 +1,16 @@
+{% extends 'layouts/base.twig' %}
+
+{% block content %}
+
+  <article id="post-{{ post.id }}">
+
+    <header>
+      <h1>Page not found</h1>
+    </header>
+
+    <p>We could not find the page you were looking for.</p>
+    <p><a href="{{ site.url }}">Return Home</a></p>
+
+  </article>
+
+{% endblock %}

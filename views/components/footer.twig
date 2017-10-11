@@ -1,0 +1,17 @@
+<footer id="colophon" role="contentinfo">
+
+  <nav class="navbar navbar-secondary" role="navigation">
+
+    <div class="collapse navbar-collapse" id="navbar-secondary">
+      {% include "components/common/menu.twig" with {'menu': footer_menu.get_items} %}
+    </div>
+
+    <span class="navbar-text">
+      {% if footer_copyright %}
+        {{ footer_copyright | shortcodes }}
+      {% endif %}
+    </span>
+
+  </nav>
+
+</footer>

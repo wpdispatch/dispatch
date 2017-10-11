@@ -1,0 +1,11 @@
+<article id="post-{{ post.id }}" role="article">
+
+  <header>
+    <h1><a href="{{ post.link }}">{{ post.title }}</a></h1>
+  </header>
+
+  <div>
+    {{ post.get_preview }}
+  </div>
+
+</article>

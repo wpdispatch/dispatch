@@ -1,0 +1,19 @@
+<header id="masthead" role="banner">
+
+  <nav class="navbar navbar-primary navbar-expand-lg" role="navigation">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="{{site.url}}">
+      <img src="{{ theme.path }}/assets/dist/images/logo.svg" alt="{{site.name}} Logo">
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbar-primary">
+      {% include "components/common/menu.twig" with {'menu': main_menu.get_items} %}
+    </div>
+
+  </nav>
+
+</header>

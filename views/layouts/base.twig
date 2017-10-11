@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="no-js" {{ site.language_attributes }} >
+
+  <head>
+
+      <meta charset="{{ site.charset }}" />
+      <title>{{ wp_title }}</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      {{ wp_head }}
+
+  </head>
+
+  <body class="{{ body_class }}">
+
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+    {% block offcanvas %}
+      {# {% include 'startup/offcanvas/offcanvas_1.twig' %} #}
+    {% endblock %}
+
+    {% block hero %}
+      {# {% include 'startup/navigations/nav_20.twig' %} #}
+    {% endblock %}
+
+    <main id="content" role="main" >
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    {% block footer %}
+        {# {% include 'startup/footers/footer_2.twig' %} #}
+    {% endblock %}
+
+    {{ wp_footer }}
+
+  </body>
+
+</html>

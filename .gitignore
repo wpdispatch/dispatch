@@ -1,0 +1,4 @@
+/assets/dist/
+/assets/.tmp/
+/assets/src/node_modules/
+/assets/srv/npm-debug.log*

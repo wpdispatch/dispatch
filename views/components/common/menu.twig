@@ -1,0 +1,24 @@
+{% if menu %}
+  <ul class="navbar-nav">
+    {% for item in menu %}
+      {% if item.get_children %}
+        <li class="{{item.classes | join(' ')}} nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="{{item.get_link}}" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{item.title}}</a>
+          <div class="dropdown-menu">
+            <ul class="dropdown-list">
+              {% for child in item.get_children %}
+                <li class="{{child.classes | join(' ')}} dropdown-item">
+                  <a href="{{child.get_link}}" >{{child.title}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </li>
+      {% else %}
+        <li class="{{item.classes | join(' ')}} nav-item">
+          <a class="nav-link" href="{{item.get_link}}">{{item.title}}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}

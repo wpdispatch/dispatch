@@ -1,0 +1,23 @@
+{% extends 'layouts/base.twig' %}
+
+{% block hero %}
+  {# {% include 'startup/headers/header_1.twig' %} #}
+{% endblock %}
+
+{% block content %}
+
+  <article id="post-{{ post.id }}">
+
+    {#
+    <header>
+      <h1>{{post.title}}</h1>
+    </header>
+    #}
+
+    {{ fewbricks_brick('flexible_content', 'flexible_content') }}
+
+    {% include 'components/content.twig' %}
+
+  </article>
+
+{% endblock %}

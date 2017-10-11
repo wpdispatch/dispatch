@@ -1,0 +1,7 @@
+{% if content or post.content %}
+  <section>
+    <div class="container">
+      {{ content | default( post.content ) }}
+    </div>
+  </section>
+{% endif %}
